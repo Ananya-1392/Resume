@@ -32,3 +32,43 @@
 .Education{
     grid-area: five;
 }
+
+
+
+main{
+    display: grid;
+}
+
+.top{
+    display: grid;
+    grid-template-areas: "name photo"
+    "contact desc";
+}
+
+.name{
+    grid-area: name;
+}
+.photo{
+    grid-area: photo ;
+}
+.contacts{
+    grid-area: contact;
+}
+.intro{
+    grid-area: desc;
+}
+
+.bottom{
+    display: grid;
+    grid-template-areas: "skills pro"
+    "edu pro";
+}
+.skills{
+    grid-area: skills;
+}
+.project{
+    grid-area: pro;
+}
+.edu{
+    grid-area: edu;
+}
