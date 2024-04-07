@@ -1,74 +1,82 @@
-.container {
-    height: 200px;
-    width: 100%;
-    border: 1px solid gray;
-    padding: 1em;
-    display: grid;
-    grid-template-areas: "one two two"
-    "one two two"
-    "one three three";
+main{
+    display: flex;
     gap: 1em;
+    flex-direction: column;
 }
-.centerFlex {
+
+
+.top{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-areas: "name name"
+    "contact desc";
+    gap: 1em;
+
+}
+.name{
+    grid-area: name;
+    border: 1px solid ;
+    padding: 1em;
+    position: relative;
+    height: 150px;
+}6
+.photo{
+    grid-area: photo;
+    border: 1px solid ;
+    padding: 1em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+}
+.contact{
+    grid-area: contact;
+    border: 1px solid ;
+    padding: 1em;
+}
+.desc{
+    grid-area: desc;
+    border: 1px solid ;
+    padding: 1em;
+}
+.bottom{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    grid-template-areas: "skill exp"
+    "edu exp";
+    gap: 1em;
+
+}
+.skills{
+    grid-area: skill;
+    border: 1px solid ;
+    padding: 1em;
+}
+.edu{
+    grid-area: edu;
+    border: 1px solid ;
+    padding: 1em;
+}
+.exp{
+    grid-area: exp;
+    border: 1px solid ;
+    padding: 1em;
+}
+.circle{
+    border-radius: 50%;
+}
+.center{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.cell {
-    border: 1px solid teal;
-}
-.Contact {
-    grid-area: one;
-}
-.Technical  {
-    grid-area: two;
-}
-.Language {
-    grid-area: three;
-}
-.Hobbies{
-    grid-area: four;
-}
-.Education{
-    grid-area: five;
-}
 
+@media only screen and (max-width: 500px) {
 
-
-main{
-    display: grid;
-}
-
-.top{
-    display: grid;
-    grid-template-areas: "name photo"
-    "contact desc";
-}
-
-.name{
-    grid-area: name;
-}
-.photo{
-    grid-area: photo ;
-}
-.contacts{
-    grid-area: contact;
-}
-.intro{
-    grid-area: desc;
-}
-
-.bottom{
-    display: grid;
-    grid-template-areas: "skills pro"
-    "edu pro";
-}
-.skills{
-    grid-area: skills;
-}
-.project{
-    grid-area: pro;
-}
-.edu{
-    grid-area: edu;
+    .bottom{
+        display: flex;
+        flex-direction: column;
+    }
 }
