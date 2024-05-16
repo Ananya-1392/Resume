@@ -1,82 +1,78 @@
-main{
-    display: flex;
-    gap: 1em;
-    flex-direction: column;
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, seagreen, lightseagreen);
+    }  
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 9px 10px black;
 }
 
-
-.top{
-    display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
-    grid-template-areas: "name name"
-    "contact desc";
-    gap: 1em;
-
-}
-.name{
-    grid-area: name;
-    border: 1px solid ;
-    padding: 1em;
+.header {
+    background: linear-gradient(45deg, #007bff, #00ffaa);
+    color: #000000;
+    padding: 50px 20px;
+    text-align: center ;
     position: relative;
-    height: 150px;
-}6
-.photo{
-    grid-area: photo;
-    border: 1px solid ;
-    padding: 1em;
+    overflow: hidden;
+}
+
+.header:before {
+    content: '';
     position: absolute;
-    right: 1em;
-    top: 50%;
-    width: 100px;
-    height: 100px;
-    background-color: white;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7));
+    z-index: -1;
 }
-.contact{
-    grid-area: contact;
-    border: 1px solid ;
-    padding: 1em;
-}
-.desc{
-    grid-area: desc;
-    border: 1px solid ;
-    padding: 1em;
-}
-.bottom{
-    display: grid;
-    grid-template-columns: 0.4fr 0.6fr;
-    grid-template-areas: "skill exp"
-    "edu exp";
-    gap: 1em;
 
+.header-content {
+    position: relative;
+    z-index: 1;
 }
-.skills{
-    grid-area: skill;
-    border: 1px solid ;
-    padding: 1em;
+
+.header h3 {
+    font-size: 32px;
+    margin-bottom: 10px;
 }
-.edu{
-    grid-area: edu;
-    border: 1px solid ;
-    padding: 1em;
+
+.summary {
+    font-size: 18px;
+    margin-bottom: 20px;
 }
-.exp{
-    grid-area: exp;
-    border: 1px solid ;
-    padding: 1em;
+
+.social-links {
+    text-align: center;
 }
-.circle{
+
+.social-links a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #ffffff;
     border-radius: 50%;
+    font-size: 20px;
+    line-height: 40px;
+    align-self: self-start;
+    margin: 0 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease; 
 }
-.center{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.social-links a:hover {
+    background-color: #040b12;
 }
-
-@media only screen and (max-width: 500px) {
-
-    .bottom{
-        display: flex;
-        flex-direction: column;
-    }
+.resume-content {
+    padding-top: 50px; /* Adjust padding to prevent content overlap with header */
+}
+.side{
+    text-align: center;
+    margin-bottom: 50px;
 }
